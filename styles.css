@@ -1,0 +1,118 @@
+:root {
+    --primary: #6D28D9;
+    --secondary: #3B82F6;
+    --accent: #F97316;
+    --gray: #9CA3AF;
+    --background: #111827;
+    --title-font: 'Montserrat', sans-serif;
+    --body-font: 'Roboto', sans-serif;
+}
+
+/* Global Styles */
+body {
+    background-color: var(--background);
+    color: white;
+    font-family: var(--body-font);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3 {
+    font-family: var(--title-font);
+}
+
+/* Hero Section */
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 4px solid var(--primary);
+}
+
+/* Skills Section */
+.skill-item {
+    background-color: rgba(109, 40, 217, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.skill-item i {
+    color: var(--primary);
+    transition: color 0.3s ease;
+}
+
+/* Projects Section */
+.projects {
+    background-color: rgba(17, 24, 39, 0.8);
+}
+
+.project-card {
+    border: 1px solid var(--gray);
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Education Section */
+.education-item {
+    border: 1px solid rgba(156, 163, 175, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.education-item:hover {
+    transform: translateY(-3px);
+}
+
+/* Buttons */
+.btn-accent {
+    background-color: var(--accent);
+    color: white;
+}
+
+.btn-outline-secondary {
+    border-color: var(--secondary);
+    color: var(--secondary);
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--secondary);
+    color: white;
+}
+
+/* Utilities */
+.text-gray {
+    color: var(--gray);
+}
+
+.bg-dark {
+    background-color: rgba(17, 24, 39, 0.95);
+}
+
+.badge {
+    font-weight: 500;
+    padding: 0.5em 0.8em;
+}
+
+@media (max-width: 768px) {
+    .profile-photo {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .btn-link span {
+        display: none;
+    }
+    
+    .btn-link .fa-envelope {
+        font-size: 1.75rem;
+    }
+}
